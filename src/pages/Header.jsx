@@ -2,20 +2,20 @@ import { Link } from "react-router-dom";
 import { Search } from "@mui/icons-material";
 import { useState } from "react";
 import FetchData from "./hooks/FetchData";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 const Header = () => {
   const [icon, setIcon] = useState(null);
-  const [search, setSearch] = useState("");
-  const history = useHistory();
+  // const [search, setSearch] = useState("");
+  // const history = useHistory();
 
   FetchData("icon.json", setIcon);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Redirect to search page with the search query
-    history.push(`/search?q=${search}`);
-  };
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+  //   // Redirect to search page with the search query
+  //   history.push(`/search?q=${search}`);
+  // };
 
   return (
     <header className="relative">
@@ -52,8 +52,8 @@ const Header = () => {
       ) : (
         <p>loading...</p>
       )}
-      <div className="absolute search w-[800px] h-[300px] top-5  left-72 bg-[#00003a] rounded-lg">
-        <form onSubmit={handleSearch} className="flex relative">
+      <div className="absolute search invisible w-[800px] h-[300px] top-5  left-72 bg-[#00003a] rounded-lg">
+        {/* <form onSubmit={handleSearch} className="flex relative">
           <input
             onChange={(e) => setSearch(e.target.value)}
             className="w-[600px] h-12 rounded-full block text-white px-4 m-0 m-auto mt-8 bg-[#0000008a]"
@@ -61,7 +61,7 @@ const Header = () => {
           <button className="absolute top-11 right-28  text-white">
             <Search />
           </button>
-        </form>
+        </form> */}
       </div>
     </header>
   );
