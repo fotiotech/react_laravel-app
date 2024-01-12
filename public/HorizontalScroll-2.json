@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Cerave White",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/51nFUxdgIZL._AC_SY200_.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Whach Black",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/51zyaVCe-5L._AC_UY327_FMwebp_QL65_.webp"
+      },
+      {
+        "id": 3,
+        "name": "Smart Whach Black",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/61CZSoSnVPL.__AC_SX300_SY300_QL70_FMwebp_.webp"
+      },
+      {
+        "id": 4,
+        "name": "Iphone 14 Pro max",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/61eDXs9QFNL._AC_UY327_FMwebp_QL65_.webp"
+      },
+      {
+        "id": 5,
+        "name": "Confortable whach",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/61g7DtAr6EL._AC_UY327_FMwebp_QL65_.webp"
+      },
+      {
+        "id": 6,
+        "name": "Pull Over",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/hoodie-boys.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Acer Laptop",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/61gKkYQn6lL._AC_UY327_FMwebp_QL65_.webp"
+      },
+      {
+        "id": 8,
+        "name": "Samsung Z flip",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image": "/61IqkfGCw5L._AC_UY327_FMwebp_QL65_.webp"
+      }
+]
