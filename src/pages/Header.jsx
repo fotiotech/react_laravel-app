@@ -1,50 +1,80 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Search } from "@mui/icons-material";
+import { useCallback, useState } from "react";
 import FetchData from "./hooks/FetchData";
 
-const MainHeader = () => {
-    const [Product, setProduct] = useState(null);
+const Header = () => {
+    const [icon, setIcon] = useState(null);
+    var [show, setShow] = useState("invisible");
+    var [inputBox, setInputBox] = useState("");
 
-    FetchData("HeaderProduct.json", setProduct);
+    var change = useCallback(() => {
+        setShow("visible");
+    }, []);
 
+    var hideBox = useCallback(() => {
+        setShow("invisible");
+    }, []);
+
+    FetchData("icon.json", setIcon);
 
     return (
-        <>
-            <div>
-                <div>
-                    <header
-                        className={`h-[700px] max-sm:h-[500px] bg-[url('/boy-long_sleeve.jpg')] bg-cover bg-center w-full`}
-                    >
-                        <div className="bg-gradient-to-t from-[#ffffffff] to-[#ffffff00] h-[700px] max-sm:h-[500px]  relative  w-full">
-                            <div className=" absolute flex flex-wrap max-sm:flex-nowrap max-sm:w-full max-sm:whitespace-nowrap max-sm:overflow-hidden max-sm:h-72 justify-between items-center top-72 max-sm:top-44 h-[720px] max-sm:mx-0  mx-20 p-3 bg-none">
-                                {Product ? (
-                                    Product.map((product) => (
-                                        <div
-                                            key={product.id}
-                                            className=" w-72 max-sm:w-[48%] max-sm:m-2 max-sm:inline-block  h-80 max-sm:h-[250px] p-5 max-sm:p-2  shadow bg-white rounded"
-                                        >
-                                            <Link to={"/detail/" + product.id}>
-                                                <img
-                                                    src={product.image}
-                                                    className=" w-64 h-64 max-sm:h-36 m-0 m-auto"
-                                                />
-                                                <p className="">
-                                                    {product.name}
-                                                </p>
-                                            </Link>
-                                        </div>
-                                    ))
-                                ) : (
-                                    <p>data is Loading...</p>
-                                )}
-                            </div>
+        <header className="relative">
+            {icon ? (
+                <div className="flex justify-between w-full bg-none h-[80px] sticky items-center max-sm:h-32 p-3 max-sm:px-2 px-20">
+                    <h1 className=" font-bold text-3xl max-sm:absolute max-sm:top-3">
+                        Logo
+                    </h1>
+                    <nav className="border max-sm:absolute max-sm:right-0 max-sm:top-14 max-sm:w-full  shadow rounded-full">
+                        <ul className="flex justify-center items-center h-[50px]">
+                            <li className="px-12 max-sm:px-6">
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li className="px-12 max-sm:px-6 border-l">
+                                <Link to="/product">Products</Link>
+                            </li>
+                            <button
+                                onClick={change}
+                                className="px-12 max-sm:px-6 SearchButton  border-l"
+                            >
+                                <Search />
+                            </button>
+                        </ul>
+                    </nav>
+                    <div className="flex justify-center max-sm:absolute max-sm:top-0 max-sm:right-0 items-center p-2">
+                        <div className="flex justify-center items-center max-sm:px-0 px-2">
+                            <p className="px-3 font-bold">Login</p>
+                            <img
+                                src={icon[0].image}
+                                alt="profile photo"
+                                className="w-8 h-8 rounded-full "
+                            />
                         </div>
-                    </header>
+                        <div className="flex justify-center items-center ml-6 max-sm:ml-2 w-11 h-11 rounded-full bg-slate-50">
+                            <img src={icon[6].image} className="w-8 h-8" />
+                        </div>
+                    </div>
                 </div>
+            ) : (
+                <p>loading...</p>
+            )}
+            <div
+                className={`absolute ${show} w-[800px] h-[300px] top-5 max-sm:w-full max-sm:left-0  left-72 bg-[#00003a] rounded-lg`}
+            >
+                <form onSubmit={hideBox} className="flex relative">
+                    <input
+                        onChange={(e) => setInputBox(e.target.value)}
+                        className="w-[600px] h-12 rounded-full block text-white px-4 m-0 m-auto mt-8 bg-[#0000008a]"
+                    />
+                    <Link to={"/search?query=" + inputBox}>
+                        <button className="absolute top-11 right-28 max-sm:right-3  text-white">
+                            <Search />
+                        </button>
+                    </Link>
+                </form>
             </div>
-        </>
+        </header>
     );
 };
 
-export default MainHeader;
-
+export default Header;
