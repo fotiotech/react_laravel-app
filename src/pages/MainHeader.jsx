@@ -16,7 +16,7 @@ const MainHeader = () => {
                         className={`h-[700px] max-sm:h-[500px] bg-[url('/boy-long_sleeve.jpg')] bg-cover bg-center w-full`}
                     >
                         <div className="bg-gradient-to-t from-[#ffffffff] to-[#ffffff00] h-[700px] max-sm:h-[500px]  relative  w-full">
-                            <div className=" absolute flex flex-wrap max-sm:flex-nowrap max-sm:w-full max-sm:whitespace-nowrap max-sm:overflow-hidden max-sm:h-72 justify-between items-center top-72 max-sm:top-44 h-[720px] max-sm:mx-0  mx-20 p-3 bg-none">
+                            <div className=" absolute flex flex-wrap max-sm:flex-nowrap max-sm:w-full max-sm:whitespace-nowrap max-sm:overflow-auto max-sm:h-72 justify-between items-center top-72 max-sm:top-44 h-[720px] max-sm:mx-0  mx-20 p-3 bg-none">
                                 {Product ? (
                                     Product.map((product) => (
                                         <div
