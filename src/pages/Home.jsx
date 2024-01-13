@@ -20,19 +20,19 @@ function Home() {
     <>
       <Header />
       <MainHeader />
-      <main className=" mt-80 w-full">
-        <h2 className="mx-20 my-5 mt-3 font-bold text-3xl">Best Deals</h2>
-        <div className=" p-3 h-72 mx-20 mb-3 whitespace-nowrap overflow-hidden bg-[#9a9a9a] ">
+      <main className=" mt-80 max-sm:mt-9 w-full">
+        <h2 className="mx-20 max-sm:mx-0  my-5 mt-3 font-bold max-sm:text-2xl text-3xl">Best Deals</h2>
+        <div className=" p-3 h-72 max-sm:h-48 mx-20 max-sm:mx-0  mb-3 whitespace-nowrap overflow-hidden bg-[#9a9a9a] ">
           {scrollProduct ? (
             scrollProduct.map((product) => (
               <div
                 key={product.id}
-                className=" w-60 h-60 mt-3 p-4 inline-block mx-[14px] bg-white rounded-3xl"
+                className=" w-60 h-60 max-sm:h-40 max-sm:w-40 mt-3 max-sm:mt-1 p-4 inline-block mx-[14px] bg-white rounded-3xl"
               >
                 <Link to={"/detail/" + product.id}>
                   <img
                     src={product.image}
-                    className=" w-32 h-40 m-0 m-auto mt-4"
+                    className=" w-32 h-40 max-sm:h-28 m-0 m-auto"
                   />
                   <p className="">{product.name}</p>
                 </Link>
@@ -42,17 +42,17 @@ function Home() {
             <p>data is Loading...</p>
           )}
         </div>
-        <div className=" p-3 h-72 mx-20 mb-3 whitespace-nowrap overflow-hidden bg-[#9a9a9a] ">
+        <div className=" p-3 h-72 max-sm:h-48 mx-20 max-sm:mx-0  mb-3 whitespace-nowrap overflow-hidden bg-[#9a9a9a] ">
           {scrollProducts ? (
             scrollProducts.map((product) => (
               <div
                 key={product.id}
-                className=" w-60 h-60 mt-3 inline-block p-4 mx-[14px] bg-white rounded-3xl"
+                className=" w-60 h-60 max-sm:h-40 max-sm:w-40 mt-3 max-sm:mt-1 inline-block p-4 mx-[14px] bg-white rounded-3xl"
               >
                 <Link to={"/detail/" + product.id}>
                   <img
                     src={product.image}
-                    className=" w-32 h-40 m-0 m-auto mt-4"
+                    className=" w-32 h-40 max-sm:h-28 m-0 m-auto"
                   />
                   <p className="">{product.name}</p>
                 </Link>
@@ -63,16 +63,16 @@ function Home() {
           )}
         </div>
         <div className="w-full mt-10">
-          <h2 className="mx-20 my-4 font-bold text-3xl">All Category</h2>
-          <div className="flex justify-between items-center gap-2 flex-wrap p-3 bg-[#afafaf] mx-20">
+          <h2 className="mx-20 max-sm:mx-0  my-4 font-bold max-sm:text-2xl text-3xl">All Category</h2>
+          <div className="flex items-center max-sm:w-full gap-3 max-sm:gap-1 flex-wrap p-3 max-sm:p-1 bg-[#afafaf] mx-20 max-sm:mx-0 ">
             {allcategorie ? (
               allcategorie.map((product) => (
                 <div
                   key={product.id}
-                  className="w-64 h-80 p-3 rounded-md bg-white"
+                  className=" w-[257px] h-80 max-sm:h-64 max-sm:w-[49%] p-3 rounded-md bg-white"
                 >
                   <Link to={"/detail/" + product.id}>
-                    <img src={product.image} className="m-0 m-auto h-52 " />
+                    <img src={product.image} className="m-0 m-auto h-52 max-sm:h-40 " />
                     <p>{product.name}</p>
                   </Link>
                 </div>
