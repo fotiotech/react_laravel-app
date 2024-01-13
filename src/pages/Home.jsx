@@ -22,7 +22,7 @@ function Home() {
       <MainHeader />
       <main className=" mt-80 max-sm:mt-9 w-full">
         <h2 className="mx-20 max-sm:mx-0  my-5 mt-3 font-bold max-sm:text-2xl text-3xl">Best Deals</h2>
-        <div className=" p-3 h-72 max-sm:h-48 mx-20 max-sm:mx-0  mb-3 whitespace-nowrap overflow-hidden bg-[#9a9a9a] ">
+        <div className=" p-3 h-72 max-sm:h-48 mx-20 max-sm:mx-0  mb-3 whitespace-nowrap overflow-hidden max-sm:overflow-auto bg-[#9a9a9a] ">
           {scrollProduct ? (
             scrollProduct.map((product) => (
               <div
@@ -42,7 +42,7 @@ function Home() {
             <p>data is Loading...</p>
           )}
         </div>
-        <div className=" p-3 h-72 max-sm:h-48 mx-20 max-sm:mx-0  mb-3 whitespace-nowrap overflow-hidden bg-[#9a9a9a] ">
+        <div className=" p-3 h-72 max-sm:h-48 mx-20 max-sm:mx-0  mb-3 whitespace-nowrap overflow-hidden max-sm:overflow-auto bg-[#9a9a9a] ">
           {scrollProducts ? (
             scrollProducts.map((product) => (
               <div
