@@ -7,7 +7,6 @@ const MainHeader = () => {
 
     FetchData("HeaderProduct.json", setProduct);
 
-
     return (
         <>
             <div>
@@ -21,13 +20,15 @@ const MainHeader = () => {
                                     Product.map((product) => (
                                         <div
                                             key={product.id}
-                                            className=" w-72 max-sm:w-[48%] max-sm:m-2 max-sm:inline-block  h-80 max-sm:h-[250px] p-5 max-sm:p-2  shadow bg-white rounded"
+                                            className=" w-72 max-sm:w-[50%] max-sm:m-2 max-sm:inline-block  h-80 max-sm:h-[250px] p-5 max-sm:p-2  shadow bg-white rounded"
                                         >
                                             <Link to={"/detail/" + product.id}>
-                                                <img
-                                                    src={product.image}
-                                                    className=" w-64 h-64 max-sm:h-36 m-0 m-auto"
-                                                />
+                                                <div className=" w-64 h-64 max-sm:h-36 max-sm:w-28 m-0 m-auto">
+                                                    <img
+                                                        src={product.image}
+                                                        className=" w-full h-full"
+                                                    />
+                                                </div>
                                                 <p className="">
                                                     {product.name}
                                                 </p>
@@ -47,4 +48,3 @@ const MainHeader = () => {
 };
 
 export default MainHeader;
-
