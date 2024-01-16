@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import FetchData from "./hooks/FetchData";
 import { useEffect, useState } from "react";
 import AddTocart from "./AddTocart";
+import React from "react";
 
 const DetailPage = () => {
     const { productid } = useParams();

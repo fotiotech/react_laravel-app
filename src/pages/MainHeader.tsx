@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import FetchData from "./hooks/FetchData";
+import React from "react";
 
 const MainHeader = () => {
     const [Product, setProduct] = useState(null);

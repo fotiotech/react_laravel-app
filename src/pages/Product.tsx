@@ -1,12 +1,13 @@
+import React from "react";
 import Header from "./Header";
 
-const CheckOut = () => {
+const Product = () => {
     return (
         <div>
             <Header />
-            CheckOut
+            Product
         </div>
     );
 };
 
-export default CheckOut;
+export default Product;

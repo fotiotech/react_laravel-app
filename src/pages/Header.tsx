@@ -3,33 +3,25 @@ import { Search } from "@mui/icons-material";
 import { useEffect, useCallback, useState } from "react";
 import FetchData from "./hooks/FetchData";
 import Cart from "./Cart";
+import React from "react";
 
 const Header = () => {
   const [icon, setIcon] = useState(null);
-  var [show, setShow] = useState("invisible");
+  var [showSearchBox, setShowSearchBox] = useState("invisible");
   var [inputBox, setInputBox] = useState("");
-  var [showCart, setShowCart] = useState("");
   const [cartItems, setCartItems] = useState(null);
+  var [showCart, setShowCart] = useState("invisible");
 
   useEffect(() => {
     const storedItems = localStorage.getItem("cartItem");
-    console.log(storedItems);
 
     if (storedItems) {
       setCartItems(JSON.parse(storedItems));
     }
   }, []);
 
-  var Card = useCallback(() => {
-    setShowCart(<Cart />);
-  }, []);
-
-  var change = useCallback(() => {
-    setShow("visible");
-  }, []);
-
   var hideBox = useCallback(() => {
-    setShow("invisible");
+    setShowSearchBox("invisible");
   }, []);
 
   FetchData("icon.json", setIcon);
@@ -49,12 +41,13 @@ const Header = () => {
               <li className="px-12 max-sm:px-6 border-l">
                 <Link to="/product">Products</Link>
               </li>
-              <button
-                onClick={change}
+              <li
+                title="Show cart"
+                onClick={() => setShowSearchBox("visible")}
                 className="px-12 max-sm:px-6 SearchButton  border-l"
               >
                 <Search />
-              </button>
+              </li>
             </ul>
           </nav>
           <div className="flex justify-center max-sm:absolute max-sm:top-0 max-sm:right-0 items-center p-2">
@@ -69,14 +62,22 @@ const Header = () => {
               />
             </div>
             <div
-              onClick={Card}
+              onClick={() => setShowCart("visible")}
               className="flex relative justify-center items-center ml-6 max-sm:ml-2 w-11 h-11 rounded-full bg-slate-50"
             >
               <img src={icon[6].image} className="w-8 h-8" />
-              <p className="rounded-full absolute w-6 h-6 text-center left-0 bottom-0 bg-red-400">
-                {cartItems ? cartItems.length : ""}
+              <p>
+                {cartItems ? (
+                  <p className="rounded-full absolute w-6 h-6 text-center left-0 bottom-0 bg-red-400">
+                    {cartItems.length}
+                  </p>
+                ) : (
+                  " "
+                )}
               </p>
-              {showCart}
+              <div className={`${showCart}`}>
+                <Cart CloseCartHandler={() => setShowCart("invisible")} />
+              </div>
             </div>
           </div>
         </div>
@@ -84,15 +85,20 @@ const Header = () => {
         <p>loading...</p>
       )}
       <div
-        className={`absolute ${show} w-[800px] h-[300px] top-5 max-sm:w-full max-sm:left-0  left-72 bg-[#00003a] rounded-lg`}
+        className={`absolute ${showSearchBox} w-[800px] h-[300px] top-5 max-sm:w-full max-sm:left-0  left-72 bg-[#00003a] rounded-lg`}
       >
         <form onSubmit={hideBox} className="flex relative">
           <input
+            title="search"
+            placeholder="Search..."
             onChange={(e) => setInputBox(e.target.value)}
             className="w-[600px] h-12 rounded-full block text-white px-4 m-0 m-auto mt-8 bg-[#0000008a]"
           />
           <Link to={"/search?query=" + inputBox}>
-            <button className="absolute top-11 right-28 max-sm:right-3  text-white">
+            <button
+              title="submit"
+              className="absolute top-11 right-28 max-sm:right-3  text-white"
+            >
               <Search />
             </button>
           </Link>

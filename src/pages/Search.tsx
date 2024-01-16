@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import FetchData from "./hooks/FetchData";
 import { useEffect, useState } from "react";
 import AddTocart from "./AddTocart";
+import React from "react";
 
 const Search = () => {
     const location = useLocation();

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import FetchData from "./hooks/FetchData";
+import React from "react";
 
 function Home() {
     const [scrollProduct, setScrollProduct] = useState(null);

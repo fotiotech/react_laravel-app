@@ -1,3 +1,5 @@
+import React from "react";
+
 const Dashbord = () => {
     return (
         <div className="p-5 ">

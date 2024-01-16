@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import ErrorPage from "./ErrorPage.jsx";
-import Home from "./pages/Home.jsx";
-import DetailPage from "./pages/DetailPage.jsx";
-import Search from "./pages/Search.jsx";
-import Product from "./pages/Product.jsx";
-import CheckOut from "./pages/CheckOut.jsx";
-import Admin from "./pages/admin/Admin.jsx";
-import Login from "./pages/users/Login.jsx";
-import SignUp from "./pages/users/SignUp.jsx";
+import ErrorPage from "./ErrorPage.tsx";
+import Home from "./pages/Home.tsx";
+import DetailPage from "./pages/DetailPage.tsx";
+import Search from "./pages/Search.tsx";
+import Product from "./pages/Product.tsx";
+import CheckOut from "./pages/CheckOut.tsx";
+import Admin from "./pages/admin/Admin.tsx";
+import Login from "./pages/users/Login.tsx";
+import SignUp from "./pages/users/SignUp.tsx";
+import React from "react";
 
 const App = () => {
     // const [userContext, setUserContext] = userContext()
