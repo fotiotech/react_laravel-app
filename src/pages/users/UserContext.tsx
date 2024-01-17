@@ -3,10 +3,10 @@ import { createContext, useState } from "react";
 
 interface ContextProps {
   children: ReactNode;
-  setUser: any,
+  setUser: any;
 }
 
-interface CreateContext {};
+interface CreateContext {}
 
 export const UserContext = createContext<CreateContext | any>({});
 

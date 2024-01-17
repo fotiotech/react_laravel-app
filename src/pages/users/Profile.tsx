@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react"
 import { UserContext } from "./UserContext";
 
@@ -7,5 +8,6 @@ const Profile = () => {
     <div>Profile of: {user.email}</div>
   )
 }
+
 
 export default Profile

@@ -1,3 +1,4 @@
+
 import Header from "./Header";
 import { Link, useParams } from "react-router-dom";
 import FetchData from "./hooks/FetchData";
@@ -94,3 +95,4 @@ const DetailPage = () => {
 };
 
 export default DetailPage;
+

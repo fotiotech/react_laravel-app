@@ -1,3 +1,4 @@
+
 import React from "react"
 
 const Account = () => {
@@ -5,5 +6,6 @@ const Account = () => {
     <div>Account</div>
   )
 }
+
 
 export default Account
