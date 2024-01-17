@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Search } from "@mui/icons-material";
 import { useEffect, useCallback, useState } from "react";
 import FetchData from "./hooks/FetchData";
-import Cart from "./Cart";
+import Cart from "./Carts/Cart";
 import React from "react";
 
 const Header = () => {

@@ -1,18 +1,21 @@
-// import { createContext, useState } from "react";
-// import PropType from "prop-types";
+import React, { FC, ReactNode } from "react";
+import { createContext, useState } from "react";
 
-// export const UserContext = createContext({});
+interface ContextProps {
+  children: ReactNode;
+  setUser: any,
+}
 
-// export function UserContextProvider({ children }) {
-//     const [user, setUser] = useState(null);
+interface CreateContext {};
 
-//     return (
-//         <UserContext.Provider value={{ user, setUser }}>
-//             {children}
-//         </UserContext.Provider>
-//     );
-// }
+export const UserContext = createContext<CreateContext | any>({});
 
-// UserContextProvider.PropType = {
-//     children: PropType.string.isRequired,
-// };
+export const UserContextProvider: FC<ContextProps> = ({ children }) => {
+  const [user, setUser] = useState<CreateContext | null>(null);
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
+};

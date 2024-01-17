@@ -30,7 +30,7 @@ const AddToCart: FC<AddToCartProps> = ({ id, Name, image, price }) => {
                     onClick={addToCartHandler}
                     type="button"
                     title="Add To Cart"
-                    className="p-2 px-4 rounded-full bg-slate-700 text-white"
+                    className="p-1 px-4 rounded-full bg-slate-700 text-white"
                 >
                     Add To Cart
                 </button>

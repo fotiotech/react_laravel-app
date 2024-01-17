@@ -24,7 +24,7 @@ const Cart: React.FC<Close> = ({ CloseCartHandler }) => {
 
   return (
     <div className="">
-      <div className="absolute w-96 h-96 top-8 right-20 rounded-3xl bg-white">
+      <div className="absolute w-96 h-96 top-8 right-20 rounded-3xl bg-slate-400">
         <button
           type="button"
           onClick={() => CloseCartHandler}
