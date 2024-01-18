@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../Header";
-import React from "react";
+
 
 const SignUp = () => {
     return (
@@ -13,16 +13,19 @@ const SignUp = () => {
                     <form className=" mt-8">
                     <label className="font-medium">Name :</label>
                         <input
+                        title="name"
                             type="text"
                             className="block bg-slate-100 my-3  px-3 border rounded-full border-slate-700 p-1 w-full"
                         />
                         <label className="font-medium">Email :</label>
                         <input
+                        title="email"
                             type="text"
                             className="block bg-slate-100 my-3  px-3 border rounded-full border-slate-700 p-1 w-full"
                         />
                         <label className="font-medium">Password :</label>
                         <input
+                        title="password"
                             type="password"
                             className="block bg-slate-100 my-3 px-3 rounded-full p-1 border border-slate-700 w-full"
                         />

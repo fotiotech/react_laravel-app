@@ -9,9 +9,23 @@ import React from "react";
 
 const Search = () => {
   const location = useLocation();
-  var searchQuery = new URLSearchParams(location.search).get("query");
-  const [products, setProducts] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState("");
+  var searchQuery: any = new URLSearchParams(location.search).get("query");
+  const [products, setProducts] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
+  const [filteredProducts, setFilteredProducts] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
 
   FetchData("Products.json", setProducts);
 
@@ -72,7 +86,7 @@ const Search = () => {
                 <Link to={"/detail/" + product.id}>
                   <div className="flex bg-white p-5 rounded-lg h-64 max-sm:h-48 m-1 w-full">
                     <div className="h-48 max-sm:h-32 w-44 max-sm:w-28 bg-[#fafafa] ">
-                      <img src={product.image} className="w-full h-full" />
+                      <img title="image" src={product.image} className="w-full h-full" />
                     </div>
                     <div>
                       <p>{product.name}</p>

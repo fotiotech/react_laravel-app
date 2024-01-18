@@ -1,4 +1,3 @@
-
 import Header from "./Header";
 import { Link, useParams } from "react-router-dom";
 import FetchData from "./hooks/FetchData";
@@ -9,14 +8,30 @@ import CheckoutButton from "./Carts/CheckoutButton";
 
 const DetailPage = () => {
   const { productid } = useParams();
-  const [products, setProducts] = useState("");
-  const [filterData, setFilterData] = useState("");
+  const [products, setProducts] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
+  const [filterData, setFilterData] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
 
   FetchData("Products.json", setProducts);
 
   useEffect(() => {
     if (products) {
-      const ProductResult = products.filter((data) => data.id == productid);
+      const ProductResult = products.filter(
+        (data: any) => data.id == productid
+      );
       setFilterData(ProductResult);
     }
   }, [products, productid]);
@@ -78,7 +93,11 @@ const DetailPage = () => {
                   <div key={data.id} className=" w-52 h-52 rounded-xl p-3">
                     <Link to={"/detail/" + data.id}>
                       <div className=" bg-slate-100 w-44 h-48">
-                        <img src={data.image} className=" w-full h-full" />
+                        <img
+                          title="image"
+                          src={data.image}
+                          className=" w-full h-full"
+                        />
                       </div>
                       <p>{data.name}</p>
                     </Link>
@@ -95,4 +114,3 @@ const DetailPage = () => {
 };
 
 export default DetailPage;
-

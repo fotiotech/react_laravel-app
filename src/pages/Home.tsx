@@ -7,9 +7,30 @@ import FetchData from "./hooks/FetchData";
 import React from "react";
 
 function Home() {
-  const [scrollProduct, setScrollProduct] = useState(null);
-  const [scrollProducts, setScrollProducts] = useState(null);
-  const [allcategorie, setAllcategorie] = useState(null);
+  const [scrollProduct, setScrollProduct] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
+  const [scrollProducts, setScrollProducts] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
+  const [allcategorie, setAllcategorie] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      image: "",
+    },
+  ]);
 
   FetchData("HorizontalScroll.json", setScrollProduct);
 
@@ -34,7 +55,7 @@ function Home() {
               >
                 <Link to={"/detail/" + product.id}>
                   <div className=" w-32 h-40 max-sm:h-28 m-0 m-auto">
-                    <img src={product.image} className=" w-full h-full" />
+                    <img title="image" src={product.image} className=" w-full h-full" />
                   </div>
                   <p className="">{product.name}</p>
                 </Link>
@@ -53,7 +74,7 @@ function Home() {
               >
                 <Link to={"/detail/" + product.id}>
                   <div className=" w-32 h-40 max-sm:h-28 m-0 m-auto">
-                    <img src={product.image} className=" w-full h-full" />
+                    <img title="image" src={product.image} className=" w-full h-full" />
                   </div>
 
                   <p className="">{product.name}</p>
@@ -77,7 +98,7 @@ function Home() {
                 >
                   <Link to={"/detail/" + product.id}>
                     <div className="m-0 m-auto  h-52 w-48 max-sm:w-36 max-sm:h-40 rounded-md bg-[#efefef]">
-                      <img src={product.image} className="h-full w-full " />
+                      <img title="image" src={product.image} className="h-full w-full " />
                     </div>
                     <p>{product.name}</p>
                   </Link>
