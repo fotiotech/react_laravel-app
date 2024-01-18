@@ -27,6 +27,7 @@ const DetailPage: React.FC = () => {
       const productResult = products.find(
         (data: Product) => data.name === productName
       );
+      console.log(productResult)
       setFilterData(productResult || null);
     }
   }, [products, productName]);
