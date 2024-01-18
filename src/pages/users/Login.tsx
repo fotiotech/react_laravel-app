@@ -7,10 +7,11 @@ import { UserContext } from "./UserContext";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [postdata, setpostdata] = useState("");
 
-  const [redirect, setRedirect] = useState(false);
+  // const [redirect, setRedirect] = useState(false);
   const { setUser } = useContext(UserContext);
+
+  setUser(email);
 
   useEffect(() => {
     const fetchdata = async () => {
@@ -18,16 +19,17 @@ const Login = () => {
       const options: any = {
         method: "POST",
 
-        body: postdata,
+        body: {
+          email: email,
+          password: password,
+        },
       };
 
       try {
         const response = await fetch(url, options);
-        setUser(response);
         const result = await response.json();
-        console.log(result);
         alert("Login successful");
-        setRedirect(true);
+        // setRedirect(true);
       } catch (error) {
         console.error(error);
       }
@@ -35,9 +37,9 @@ const Login = () => {
     fetchdata();
   }, []);
 
-  if (redirect) {
-    return <Link to={"/profile"} />;
-  }
+  // if (redirect) {
+  //   return <Link to={"/profile"} />;
+  // }
 
   return (
     <>
@@ -45,7 +47,7 @@ const Login = () => {
       <div className="flex justify-center items-center max-sm:relative bg-slate-100 w-full h-[620px]">
         <div className="w-96 bg-white rounded-2xl max-sm:rounded-none border-slate-700 p-8 border max-sm:absolute max-sm:top-1 max-sm:border-0">
           <h1 className="mt-4 text-2xl font-bold">Login</h1>
-          <form className=" mt-8">
+          <form onSubmit={() => <Navigate to={"/profile"} />} className=" mt-8">
             <label className="font-medium">Email :</label>
             <input
               onChange={(e) => setEmail(e.target.value)}
@@ -63,11 +65,6 @@ const Login = () => {
             <p>Forget Password?</p>
 
             <button
-              onSubmit={() => {
-                setpostdata(email);
-                setpostdata(password);
-                <Link to={"/profile"} />;
-              }}
               title="submit"
               type="submit"
               value="Submit"

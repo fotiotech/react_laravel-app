@@ -30,7 +30,7 @@ const MainHeader = () => {
                       key={product.id}
                       className=" w-72 max-sm:w-[50%] max-sm:m-2 max-sm:inline-block  h-80 max-sm:h-[250px] p-5 max-sm:p-2  shadow bg-white rounded"
                     >
-                      <Link to={"/detail/" + product.id}>
+                      <Link to={"/detail?query=" + product.name}>
                         <div className=" w-64 h-64 max-sm:h-36 max-sm:w-28 m-0 m-auto">
                           <img
                             title="image"

@@ -3,15 +3,25 @@ import { createContext, useState } from "react";
 
 interface ContextProps {
   children: ReactNode;
-  setUser: any;
 }
 
-interface CreateContext {}
+type CreateContext = {
+  user: {
+    name: string;
+    email: string;
+    password: string;
+  };
+  setUser: () => void
+};
 
-export const UserContext = createContext<CreateContext | any>({});
+export const UserContext = createContext<CreateContext | any>(null);
 
 export const UserContextProvider: FC<ContextProps> = ({ children }) => {
-  const [user, setUser] = useState<CreateContext | null>(null);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   return (
     <UserContext.Provider value={{ user, setUser }}>

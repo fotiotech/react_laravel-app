@@ -53,7 +53,7 @@ function Home() {
                 key={product.id}
                 className=" w-60 h-60 max-sm:h-40 max-sm:w-40 mt-3 max-sm:mt-1 p-4 inline-block mx-[14px] bg-white rounded-3xl"
               >
-                <Link to={"/detail/" + product.id}>
+                <Link to={"/detail?query=" + product.name}>
                   <div className=" w-32 h-40 max-sm:h-28 m-0 m-auto">
                     <img title="image" src={product.image} className=" w-full h-full" />
                   </div>
@@ -72,7 +72,7 @@ function Home() {
                 key={product.id}
                 className=" w-60 h-60 max-sm:h-40 max-sm:w-40 mt-3 max-sm:mt-1 inline-block p-4 mx-[14px] bg-white rounded-3xl"
               >
-                <Link to={"/detail/" + product.id}>
+                <Link to={"/detail?query=" + product.name}>
                   <div className=" w-32 h-40 max-sm:h-28 m-0 m-auto">
                     <img title="image" src={product.image} className=" w-full h-full" />
                   </div>
@@ -96,7 +96,7 @@ function Home() {
                   key={product.id}
                   className=" w-[257px] max-sm:w-[49%] p-3 rounded-md bg-white"
                 >
-                  <Link to={"/detail/" + product.id}>
+                  <Link to={"/detail?query=" + product.name}>
                     <div className="m-0 m-auto  h-52 w-48 max-sm:w-36 max-sm:h-40 rounded-md bg-[#efefef]">
                       <img title="image" src={product.image} className="h-full w-full " />
                     </div>
