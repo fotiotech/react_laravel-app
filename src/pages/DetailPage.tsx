@@ -18,16 +18,14 @@ const DetailPage: React.FC = () => {
   const [products, setProducts] = useState<Product[] | null>(null);
   const [filterData, setFilterData] = useState<Product | null>(null);
 
-
-    FetchData("Products.json", setProducts);
-
+  FetchData("Products.json", setProducts);
 
   useEffect(() => {
     if (products && productName) {
       const productResult = products.find(
         (data: Product) => data.name === productName
       );
-      console.log(productResult)
+      console.log(productResult);
       setFilterData(productResult || null);
     }
   }, [products, productName]);
@@ -58,7 +56,7 @@ const DetailPage: React.FC = () => {
                   <div className=" ">
                     <AddToCart
                       id={filterData.id}
-                      name={filterData.name}
+                      Name={filterData.name}
                       image={filterData.image}
                       // Add other required props like price here
                     />
@@ -78,11 +76,10 @@ const DetailPage: React.FC = () => {
           <div className="w-full flex flex-wrap items-center">
             {products ? (
               products
-                .filter(
-                  (product) =>
-                    product.name
-                      .toLowerCase()
-                      .includes(filterData?.name.toLowerCase() || "")
+                .filter((product) =>
+                  product.name
+                    .toLowerCase()
+                    .includes(filterData?.name.toLowerCase() || "")
                 )
                 .map((data) => (
                   <div key={data.id} className="w-52 h-52 rounded-xl p-3">
