@@ -59,15 +59,16 @@ const Login = () => {
               className="block bg-slate-100 my-3 px-3 rounded-full p-1 border border-slate-700 w-full"
             />
             <p>Forget Password?</p>
-
-            <button
-              title="submit"
-              type="submit"
-              value="Submit"
-              className="block w-full font-medium text-white rounded-full text-center p-1 bg-slate-700 my-3"
-            >
-              Submit
-            </button>
+            <Link to={"/admin"}>
+              <button
+                title="submit"
+                type="submit"
+                value="Submit"
+                className="block w-full font-medium text-white rounded-full text-center p-1 bg-slate-700 my-3"
+              >
+                Submit
+              </button>
+            </Link>
           </form>
           <p>
             Do not have an Account? <Link to={"/signup"}>Sign Up</Link>

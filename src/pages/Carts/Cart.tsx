@@ -9,8 +9,8 @@ const Cart: React.FC<Close> = ({ CloseCartHandler }) => {
   const { cart } = useContext(CartContext);
 
   return (
-    <div className="absolute w-96 h-96 top-8 right-20 rounded-3xl bg-slate-400">
-      <div className="flex justify-en@d">
+    <div className="absolute w-96 h-96 top-8 max-sm:top-2 max-sm:right-2 max-sm:w-64 right-20 rounded-3xl bg-slate-400">
+      <div className="flex justify-end">
         <button
           type="button"
           onClick={() => CloseCartHandler}

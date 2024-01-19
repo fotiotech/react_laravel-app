@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Search } from "@mui/icons-material";
-import { useCallback, useState, useContext } from "react";
+import { useCallback, useState, useContext, useEffect } from "react";
 import FetchData from "./hooks/FetchData";
 import Cart from "./carts/Cart";
 import React from "react";
@@ -9,6 +9,7 @@ import { CartContext } from "./carts/CartContext";
 const Header = () => {
   const [icon, setIcon] = useState(null);
   var [showSearchBox, setShowSearchBox] = useState("invisible");
+  // var [showSBox, setShowSBox] = useState(true);
   var [inputBox, setInputBox] = useState("");
   const { cart } = useContext(CartContext);
   var [showCart, setShowCart] = useState("invisible");
@@ -16,6 +17,21 @@ const Header = () => {
   var hideBox = useCallback(() => {
     setShowSearchBox("invisible");
   }, []);
+
+  // var hidBox = useCallback((e) => {
+  //   const box = document.querySelector("#box");
+  //   if (box && !box.contains(e.target)) {
+  //     setShowSBox(false);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   document.addEventListener("click", hidBox);
+  //   return () => {
+  //   document.removeEventListener("click", hidBox);
+
+  //   }
+  // });
 
   FetchData("icon.json", setIcon);
 
@@ -78,7 +94,7 @@ const Header = () => {
         <p>loading...</p>
       )}
       <div
-        className={`absolute ${showSearchBox} w-[800px] h-[300px] top-5 max-sm:w-full max-sm:left-0  left-72 bg-[#00003a] rounded-lg`}
+        className={`absolute box ${showSearchBox} w-[800px] h-[300px] top-5 max-sm:w-full max-sm:left-0  left-72 bg-[#00003a] rounded-lg`}
       >
         <form onSubmit={hideBox} className="flex relative">
           <input
