@@ -1,4 +1,5 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useContext } from "react";
+import { CartContext} from "./CartConText";
 
 interface AddToCartProps {
   id: string | number;
@@ -10,6 +11,8 @@ const cart: { Prodid: string | number; ProdName: string; ProdImage: string }[] =
   [];
 
 const AddToCart: FC<AddToCartProps> = ({ id, Name, image }) => {
+  const {setCart} = useContext(CartContext);
+
   const addToCartHandler = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       cart.push({
@@ -17,7 +20,7 @@ const AddToCart: FC<AddToCartProps> = ({ id, Name, image }) => {
         ProdName: Name,
         ProdImage: image,
       });
-      localStorage.setItem("cartItem", JSON.stringify(cart));
+      setCart(cart);
     },
     [id, Name, image]
   );

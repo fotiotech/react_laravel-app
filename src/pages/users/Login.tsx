@@ -3,6 +3,7 @@ import Header from "../Header";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "./UserContext";
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,32 +15,27 @@ const Login = () => {
   setUser(email);
 
   useEffect(() => {
-    const fetchdata = async () => {
-      const url = "/login";
-      const options: any = {
-        method: "POST",
-
-        body: {
-          email: email,
-          password: password,
-        },
-      };
-
-      try {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        alert("Login successful");
-        // setRedirect(true);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchdata();
+    axios
+      .post("/signin", {
+        email: email,
+        password: password,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }, []);
 
-  // if (redirect) {
-  //   return <Link to={"/profile"} />;
-  // }
+  function SignUpValidation() {
+    if (!email || !password) {
+      alert("too bad validation");
+      return false;
+    } else {
+      <Navigate to={"/profile"} />;
+    }
+  }
 
   return (
     <>
@@ -47,7 +43,7 @@ const Login = () => {
       <div className="flex justify-center items-center max-sm:relative bg-slate-100 w-full h-[620px]">
         <div className="w-96 bg-white rounded-2xl max-sm:rounded-none border-slate-700 p-8 border max-sm:absolute max-sm:top-1 max-sm:border-0">
           <h1 className="mt-4 text-2xl font-bold">Login</h1>
-          <form onSubmit={() => <Navigate to={"/profile"} />} className=" mt-8">
+          <form onSubmit={SignUpValidation} className=" mt-8">
             <label className="font-medium">Email :</label>
             <input
               onChange={(e) => setEmail(e.target.value)}

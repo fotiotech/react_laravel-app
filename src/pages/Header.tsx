@@ -1,25 +1,19 @@
 
 import { Link } from "react-router-dom";
 import { Search } from "@mui/icons-material";
-import { useEffect, useCallback, useState } from "react";
+import { useCallback, useState, useContext } from "react";
 import FetchData from "./hooks/FetchData";
 import Cart from "./Carts/Cart";
 import React from "react";
+import { CartContext } from "./Carts/CartConText";
 
 const Header = () => {
   const [icon, setIcon] = useState(null);
   var [showSearchBox, setShowSearchBox] = useState("invisible");
   var [inputBox, setInputBox] = useState("");
-  const [cartItems, setCartItems] = useState(null);
+  const {cart} = useContext(CartContext);
   var [showCart, setShowCart] = useState("invisible");
 
-  useEffect(() => {
-    const storedItems = localStorage.getItem("cartItem");
-
-    if (storedItems) {
-      setCartItems(JSON.parse(storedItems));
-    }
-  }, []);
 
   var hideBox = useCallback(() => {
     setShowSearchBox("invisible");
@@ -28,7 +22,7 @@ const Header = () => {
   FetchData("icon.json", setIcon);
 
   return (
-    <header className="relative">
+    <header className="relative z-10">
       {icon ? (
         <div className="flex justify-between w-full bg-none h-[80px] sticky items-center max-sm:h-32 p-3 max-sm:px-2 px-20">
           <h1 className=" font-bold text-3xl max-sm:absolute max-sm:top-3">
@@ -68,9 +62,9 @@ const Header = () => {
             >
               <img src={icon[6].image} className="w-8 h-8" />
               <p>
-                {cartItems ? (
+                {cart ? (
                   <p className="rounded-full absolute w-6 h-6 text-center left-0 bottom-0 bg-red-400">
-                    {cartItems.length}
+                    {cart.length}
                   </p>
                 ) : (
                   " "
