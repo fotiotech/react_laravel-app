@@ -70,7 +70,7 @@ const Search = () => {
             </ul>
           </div>
         </div>
-        <div className=" w-full h-[1000px] overflow-hidden">
+        <div className=" w-full overflow-hidden">
           {filteredProducts ? (
             filteredProducts.map((product) => (
               <div key={product.id} className="relative">
