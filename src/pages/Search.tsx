@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -79,14 +78,17 @@ const Search = () => {
                   <AddToCart
                     id={product.id}
                     Name={product.name}
-                    price={product.price}
                     image={product.image}
                   />
                 </div>
                 <Link to={"/detail?query=" + product.name}>
                   <div className="flex bg-white p-5 rounded-lg h-64 max-sm:h-48 m-1 w-full">
                     <div className="h-48 max-sm:h-32 w-44 max-sm:w-28 bg-[#fafafa] ">
-                      <img title="image" src={product.image} className="w-full h-full" />
+                      <img
+                        title="image"
+                        src={product.image}
+                        className="w-full h-full"
+                      />
                     </div>
                     <div>
                       <p>{product.name}</p>
