@@ -11,12 +11,12 @@ import Login from "./pages/users/Login";
 import SignUp from "./pages/users/SignUp";
 import { UserContextProvider } from "./pages/users/UserContext";
 import Profile from "./pages/users/Profile";
-import CartConText from "./pages/carts/CartConText";
+import CartContext from "./pages/carts/CartContext";
 
 const App = () => {
   return (
     <>
-      <CartConText>
+      <CartContext>
         <UserContextProvider>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,7 +31,7 @@ const App = () => {
             <Route path="/check-out" element={<CheckOut />} />
           </Routes>
         </UserContextProvider>
-      </CartConText>
+      </CartContext>
     </>
   );
 };

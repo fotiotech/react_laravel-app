@@ -4,7 +4,7 @@ import { useCallback, useState, useContext } from "react";
 import FetchData from "./hooks/FetchData";
 import Cart from "./carts/Cart";
 import React from "react";
-import { CartContext } from "./carts/CartConText";
+import { CartContext } from "./carts/CartContext";
 
 const Header = () => {
   const [icon, setIcon] = useState(null);

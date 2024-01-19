@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useContext } from "react";
-import { CartContext} from "./CartConText";
+import { CartContext } from "./CartContext";
 
 interface AddToCartProps {
   id: string | number;
@@ -11,7 +11,7 @@ const cart: { Prodid: string | number; ProdName: string; ProdImage: string }[] =
   [];
 
 const AddToCart: FC<AddToCartProps> = ({ id, Name, image }) => {
-  const {setCart} = useContext(CartContext);
+  const { setCart } = useContext(CartContext);
 
   const addToCartHandler = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
