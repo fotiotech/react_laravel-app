@@ -74,7 +74,7 @@ const Search = () => {
           {filteredProducts ? (
             filteredProducts.map((product) => (
               <div key={product.id} className="relative">
-                <div className=" absolute left-64 top-48">
+                <div className=" absolute left-64 max-sm:top-36 max-sm:left-44 top-48">
                   <AddToCart
                     id={product.id}
                     Name={product.name}
