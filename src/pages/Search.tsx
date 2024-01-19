@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FetchData from "./hooks/FetchData";
 import { useEffect, useState } from "react";
-import AddToCart from "./Carts/AddToCart";
+import AddToCart from "./Carts/AddTocart";
 import React from "react";
 
 const Search = () => {
