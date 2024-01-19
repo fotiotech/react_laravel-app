@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FetchData from "./hooks/FetchData";
 import { useEffect, useState } from "react";
-import AddTocart from "./Carts/AddTocart";
+import AddToCart from "./Carts/AddToCart";
 import React from "react";
 
 const Search = () => {
@@ -76,7 +76,7 @@ const Search = () => {
             filteredProducts.map((product) => (
               <div key={product.id} className="relative">
                 <div className=" absolute left-64 top-48">
-                  <AddTocart
+                  <AddToCart
                     id={product.id}
                     Name={product.name}
                     price={product.price}
