@@ -70,9 +70,9 @@ const DetailPage: React.FC = () => {
             <p>Loading...</p>
           )}
         </div>
-        <div className="bg-white">
+        <div className="bg-white w-full">
           <h2 className="text-2xl font-bold">Similar Products</h2>
-          <div className="w-full flex flex-wrap items-center">
+          <div className="w-full flex flex-wrap max-sm:flex-nowrap max-sm:flex-col items-center">
             {products ? (
               products
                 .filter((product) =>
@@ -81,9 +81,9 @@ const DetailPage: React.FC = () => {
                     .includes(filterData?.name.toLowerCase() || "")
                 )
                 .map((data) => (
-                  <div key={data.id} className="w-52 h-52 rounded-xl p-3">
-                    <Link to={"/detail/" + data.name}>
-                      <div className="bg-slate-100 w-44 h-48">
+                  <Link key={data.id} to={"/detail?query=" + data.name}>
+                    <div  className="w-52 max-sm:w-full bg-white h-52 max-sm:mb-1  max-sm:flex  rounded-xl max-sm:rounded-none p-3 max-sm:p-1">
+                      <div className="bg-slate-100 w-44 max-sm:m-3 h-48">
                         <img
                           title="image"
                           src={data.image}
@@ -91,8 +91,8 @@ const DetailPage: React.FC = () => {
                         />
                       </div>
                       <p>{data.name}</p>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 ))
             ) : (
               <p>Loading...</p>
