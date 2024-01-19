@@ -1,19 +1,17 @@
-
 import { Link } from "react-router-dom";
 import { Search } from "@mui/icons-material";
 import { useCallback, useState, useContext } from "react";
 import FetchData from "./hooks/FetchData";
-import Cart from "./Carts/Cart";
+import Cart from "./carts/Cart";
 import React from "react";
-import { CartContext } from "./Carts/CartConText";
+import { CartContext } from "./carts/CartConText";
 
 const Header = () => {
   const [icon, setIcon] = useState(null);
   var [showSearchBox, setShowSearchBox] = useState("invisible");
   var [inputBox, setInputBox] = useState("");
-  const {cart} = useContext(CartContext);
+  const { cart } = useContext(CartContext);
   var [showCart, setShowCart] = useState("invisible");
-
 
   var hideBox = useCallback(() => {
     setShowSearchBox("invisible");
@@ -104,4 +102,3 @@ const Header = () => {
 };
 
 export default Header;
-
