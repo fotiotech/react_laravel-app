@@ -35,9 +35,9 @@ const Header = () => {
       {icon ? (
         <div className="flex justify-between w-full bg-none h-[80px] sticky items-center max-sm:h-32 p-3 max-sm:px-2 px-20">
           <h1 className=" font-bold text-3xl max-sm:absolute max-sm:top-3">
-            <span>
-              <img src="/public/logo.png" className=" max-sm:w-14"/>
-            </span>
+            <Link to={'/'}>
+              <img title="logo" src="/public/logo.png" className=" max-sm:w-14"/>
+            </Link>
           </h1>
           <nav className="border max-sm:absolute max-sm:right-0 max-sm:top-14 max-sm:w-full  shadow rounded-full">
             <ul className="flex justify-center items-center h-[50px]">
