@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/DetailPage";
 import Search from "./pages/Search";
 import Product from "./pages/products/Product";
-import CheckOut from "./pages/carts/CheckOut";
+// import CheckOut from "./pages/carts/CheckOut";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/users/Login";
 import SignUp from "./pages/users/SignUp";
@@ -28,7 +28,7 @@ const App = () => {
             <Route path="/detail" element={<DetailPage />} />
             <Route path="/product" element={<Product />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/checkout" element={<CheckOut />} />
+            {/* <Route path="/checkout" element={<CheckOut />} /> */}
           </Routes>
         </UserContextProvider>
       </CartContext>
