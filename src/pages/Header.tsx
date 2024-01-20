@@ -4,34 +4,29 @@ import { useCallback, useState, useContext, useEffect } from "react";
 import FetchData from "./hooks/FetchData";
 import Cart from "./carts/Cart";
 import React from "react";
-import { CartContext } from "./carts/CartContext";
+
+// type Cart = {
+//   Prodid: string | number;
+//   ProdName: string;
+//   ProdImage: string;
+// };
 
 const Header = () => {
   const [icon, setIcon] = useState(null);
   var [showSearchBox, setShowSearchBox] = useState("invisible");
   // var [showSBox, setShowSBox] = useState(true);
   var [inputBox, setInputBox] = useState("");
-  const { cart } = useContext(CartContext);
   var [showCart, setShowCart] = useState("invisible");
+  const [carts, setCarts] = useState("");
+
+  useEffect(() => {
+    const getCart = localStorage.getItem("carT");
+    setCarts(JSON.stringify(getCart));
+  });
 
   var hideBox = useCallback(() => {
     setShowSearchBox("invisible");
   }, []);
-
-  // var hidBox = useCallback((e) => {
-  //   const box = document.querySelector("#box");
-  //   if (box && !box.contains(e.target)) {
-  //     setShowSBox(false);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   document.addEventListener("click", hidBox);
-  //   return () => {
-  //   document.removeEventListener("click", hidBox);
-
-  //   }
-  // });
 
   FetchData("icon.json", setIcon);
 
@@ -64,21 +59,23 @@ const Header = () => {
               <Link to={"/login"}>
                 <p className="px-3 font-bold">Login</p>
               </Link>
-              <img
-                src={icon[0].image}
-                alt="profile photo"
-                className="w-8 h-8 rounded-full "
-              />
+              <Link to={"/profile"}>
+                <img
+                  src={icon[0].image}
+                  alt="profile photo"
+                  className="w-8 h-8 rounded-full "
+                />
+              </Link>
             </div>
             <div
               onClick={() => setShowCart("visible")}
               className="flex relative justify-center items-center ml-6 max-sm:ml-2 w-11 h-11 rounded-full bg-slate-50"
             >
-              <img src={icon[6].image} className="w-8 h-8" />
+              <img title="image" src={icon[6].image} className="w-8 h-8" />
               <p>
-                {cart ? (
+                {carts ? (
                   <p className="rounded-full absolute w-6 h-6 text-center left-0 bottom-0 bg-red-400">
-                    {cart.length}
+                    {carts.length}
                   </p>
                 ) : (
                   " "

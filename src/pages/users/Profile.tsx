@@ -5,8 +5,10 @@ import { UserContext } from "./UserContext";
 const Profile = () => {
   const {user} = useContext(UserContext);
 
+  console.log(user)
+
   return (
-    <div>Profile of: {user.email}</div>
+    <div>Profile of: </div>
   )
 }
 

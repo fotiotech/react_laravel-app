@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import FetchData from "./hooks/FetchData";
 import React from "react";
@@ -12,6 +12,43 @@ const MainHeader = () => {
       image: "",
     },
   ]);
+  const [BgHeader, setBgHeader] = useState<string | null>("");
+  // const listRef = useRef(null);
+
+  // function scrollToIndex(index) {
+  //   const listNode = listRef.current;
+
+  //   const imgNode = BgHeader[index];
+  //   imgNode.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "nearest",
+  //     inline: "center",
+  //   });
+  // }
+
+  useEffect(() => {
+    
+    const img1 = "bg-[url('/hooded_t-shirt.jpg')] transition-all duration-500 ease-in-out";
+    const img2 = "bg-[url('/shirt-button.jpg')] transition-all duration-500 ease-in-out";
+    const img3 = "bg-[url('/polo-1.jpg')] transition-all duration-500 ease-in-out";
+    const img4 = "bg-[url('/boy-long_sleeve.jpg')] transition-all duration-500 ease-in-out";
+
+    setTimeout(() => {
+      setBgHeader(img1);
+    }, 1000);
+    setTimeout(() => {
+      setBgHeader(img2);
+    }, 5000);
+    setTimeout(() => {
+      setBgHeader(img3);
+    }, 10000);
+    setTimeout(() => {
+      setBgHeader(img4);
+    }, 15000);
+    return () => {
+      setBgHeader(null);
+    };
+  }, []);
 
   FetchData("HeaderProduct.json", setProduct);
 
@@ -20,9 +57,10 @@ const MainHeader = () => {
       <div>
         <div>
           <header
-            className={`h-[700px] max-sm:h-[500px] bg-[url('/boy-long_sleeve.jpg')] bg-cover bg-center w-full`}
+            className={`h-[700px] max-sm:h-[500px] w-full`}
           >
-            <div className="bg-gradient-to-t from-[#ffffffff] to-[#ffffff00] h-[700px] max-sm:h-[500px]  relative  w-full">
+            <div className={`h-[700px] max-sm:h-[500px] ${BgHeader} bg-cover bg-center w-full`}>
+              <div className="bg-gradient-to-t from-[#ffffffff] to-[#ffffff00] h-[700px] max-sm:h-[500px]  relative  w-full">
               <div className=" absolute flex flex-wrap max-sm:flex-nowrap max-sm:w-full max-sm:whitespace-nowrap max-sm:overflow-auto max-sm:h-72 justify-between items-center top-72 max-sm:top-44 h-[720px] max-sm:mx-0  mx-20 p-3 bg-none">
                 {Product ? (
                   Product.map((product) => (
@@ -47,6 +85,8 @@ const MainHeader = () => {
                 )}
               </div>
             </div>
+            </div>
+            
           </header>
         </div>
       </div>

@@ -12,29 +12,30 @@ const Login = () => {
   // const [redirect, setRedirect] = useState(false);
   const { setUser } = useContext(UserContext);
 
-  setUser(email);
-
-  useEffect(() => {
-    axios
-      .post("/signin", {
-        email: email,
-        password: password,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
-
-  function SignUpValidation() {
+  async function handleLoginSubmit() {
     if (!email || !password) {
       alert("too bad validation");
       return false;
     } else {
-      <Navigate to={"/profile"} />;
+      document.cookie =
+        email + "; expires=Mon, 18 Mar 2024 12:00:00 UTC; path=./";
+      document.cookie =
+        password + "; expires=Mon, 18 Mar 2024 12:00:00 UTC; path=./";
     }
+
+    useEffect(() => {
+      async function SignUpValidation() {
+        try {
+          const { data } = await axios.post("/login", { email, password });
+          setUser(data);
+          alert("Login successful");
+        } catch (e) {
+          alert("Login failed");
+        }
+      }
+      SignUpValidation();
+      <Navigate to={"/profile"} />;
+    });
   }
 
   return (
@@ -43,7 +44,7 @@ const Login = () => {
       <div className="flex justify-center items-center max-sm:relative bg-slate-100 w-full h-[620px]">
         <div className="w-96 bg-white rounded-2xl max-sm:rounded-none border-slate-700 p-8 border max-sm:absolute max-sm:top-1 max-sm:border-0">
           <h1 className="mt-4 text-2xl font-bold">Login</h1>
-          <form onSubmit={SignUpValidation} className=" mt-8">
+          <form onSubmit={handleLoginSubmit} className=" mt-8">
             <label className="font-medium">Email :</label>
             <input
               onChange={(e) => setEmail(e.target.value)}
@@ -59,20 +60,23 @@ const Login = () => {
               className="block bg-slate-100 my-3 px-3 rounded-full p-1 border border-slate-700 w-full"
             />
             <p>Forget Password?</p>
-            <Link to={"/admin"}>
-              <button
-                title="submit"
-                type="submit"
-                value="Submit"
-                className="block w-full font-medium text-white rounded-full text-center p-1 bg-slate-700 my-3"
-              >
-                Submit
-              </button>
-            </Link>
+
+            <button
+              title="submit"
+              type="submit"
+              value="Submit"
+              className="block w-full font-medium text-white rounded-full text-center p-1 bg-slate-700 my-3"
+            >
+              Submit
+            </button>
           </form>
+
           <p>
             Do not have an Account? <Link to={"/signup"}>Sign Up</Link>
           </p>
+          <Link to={"/admin"}>
+            <p>Admin</p>
+          </Link>
         </div>
       </div>
     </>

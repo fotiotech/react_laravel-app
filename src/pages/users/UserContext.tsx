@@ -14,14 +14,10 @@ type CreateContext = {
   setUser: () => void
 };
 
-export const UserContext = createContext<CreateContext | any>(null);
+export const UserContext = createContext<CreateContext | unknown>(null);
 
 export const UserContextProvider: FC<ContextProps> = ({ children }) => {
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [user, setUser] = useState<CreateContext | unknown>(null);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
