@@ -21,10 +21,7 @@ const Admin = () => {
 
   return (
     <div className="w-full">
-      <div className="flex px-20">
-        <Link to={"/"}>
-          <h1 className="font-bold text-lg px-3">Logo</h1>
-        </Link>
+      <div className="flex px-20 max-sm:px-1">
         <div
           onClick={() => setMeNu(unhidemenu)}
           className=" flex invisible max-sm:visible"
@@ -33,6 +30,9 @@ const Admin = () => {
             <Menu />
           </span>
         </div>
+        <Link to={"/"}>
+          <img title="logo" src="/public/logo.png" className=" max-sm:w-14" />
+        </Link>
       </div>
 
       <div className="flex px-20 w-full max-sm:w-full relative max-sm:px-1 bg-slate-100">
@@ -188,18 +188,8 @@ const Admin = () => {
             </h2>
           </div>
         </div>
-        <div className="w-[60%] h-full max-sm:w-full bg-white border">
+        <div className="w-[80%] h-full max-sm:w-full bg-white border">
           {showComponent}
-        </div>
-        <div className="w-[20%] max-sm:absolute max-sm:ml-96">
-          <form>
-            <input
-              title="input"
-              type="text"
-              className="w-full h-20 rounded-3xl border"
-            />
-            <button title="button" />
-          </form>
         </div>
       </div>
     </div>

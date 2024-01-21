@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 
-const FetchData = (endpoint: string, setInitialState: (data: []) => void) => {
+ const FetchData = (endpoint: string, setInitialState: (data: []) => void) => {
   useEffect(() => {
     try {
       fetch(`/${endpoint}`)

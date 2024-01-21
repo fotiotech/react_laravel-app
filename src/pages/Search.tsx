@@ -1,10 +1,10 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import FetchData from "./hooks/FetchData";
 import { useEffect, useState } from "react";
 import AddToCart from "./carts/AddTocart";
-import React from "react";
 
 const Search = () => {
   const location = useLocation();
