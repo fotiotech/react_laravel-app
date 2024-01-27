@@ -2,377 +2,540 @@
   {
     "id": 0,
     "name": "boy-long sleeve1",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "image": "/boy-long_sleeve.jpg"
+    "image": "/boy-long_sleeve.jpg",
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 1,
     "name": "hooded boy t-shirt",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "image": "/hooded_t-shirt.jpg"
+    "image": "/hooded_t-shirt.jpg",
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 2,
-    "name": "hoodie boy",
+    "name": "hoodie boy ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/hoodie-boys.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 3,
-    "name": "jogger pant",
+    "name": "jogger pant ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/jogger_pant.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 4,
-    "name": "man short",
+    "name": "man short ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/man-short.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 5,
-    "name": "men cargo",
+    "name": "men cargo ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/men_cargo.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 6,
     "name": "pocket fit",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/pocket_fit.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 7,
     "name": "Polo",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/polo-1.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 8,
     "name": "Shirt button",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/shirt-button.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 9,
-    "name": "t-shirt",
+    "name": "t-shirt ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/t_shirt-1.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 10,
     "name": "t-shirt red",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/t_shirt-2.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 11,
-    "name": "boy-long sleeve2",
+    "name": "boy-long sleeve2 ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/t_shirt-3.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 12,
-    "name": "pijama",
+    "name": "pijama ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/t_shirt-3.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 13,
     "name": "pocket men",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/pocket_fit.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 14,
-    "name": "eard phone",
+    "name": "eard phone ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/31PwOLJ2EjL._AC_UL480_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 15,
-    "name": "Ipad",
+    "name": "Ipad ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/41GcCeBaq5L._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 16,
     "name": "Iphone 12 Pro",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/41RU-TKYkLL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 17,
-    "name": "Phone Black",
+    "name": "Phone Black ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/51bfhhUKhTL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 18,
-    "name": "Cerave White",
+    "name": "Cerave White ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/51nFUxdgIZL._AC_SY200_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 19,
     "name": "Whach Black",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/51zyaVCe-5L._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 20,
-    "name": "Smart Whach Black",
+    "name": "Smart Whach Black ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61CZSoSnVPL.__AC_SX300_SY300_QL70_FMwebp_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 21,
     "name": "Iphone 14 Pro max",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61eDXs9QFNL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 22,
-    "name": "Confortable whach",
+    "name": "Confortable whach ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61g7DtAr6EL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 23,
     "name": "Pull Over",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/hoodie-boys.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 24,
-    "name": "Acer Laptop",
+    "name": "Acer Laptop ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61gKkYQn6lL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 25,
-    "name": "Samsung Z flip",
+    "name": "Samsung Z flip ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61IqkfGCw5L._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 26,
-    "name": "Samsung S22",
+    "name": "Samsung S22 ",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61LyIe34PVL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 27,
-    "name": "Samsung A54",
+    "name": "Samsung A54 ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61MEp5HIdBL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 28,
-    "name": "Cerave small",
+    "name": "Cerave small ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61pP5gObVXL._AC_SY200_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 29,
-    "name": "boy-long sleeve3",
+    "name": "boy-long sleeve3 ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61r9pDwmNHL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 30,
-    "name": "Phone",
+    "name": "Phone ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/61ReFn+YL1L._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 31,
-    "name": "Samsung S23 ",
+    "name": "Samsung S23  ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/718LuUVEOZL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 32,
-    "name": "HP laptop",
+    "name": "HP laptop ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/71bphKmt0DL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 33,
     "name": "Samsung A73",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/71iQPXoiWYL._AC_UL480_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 34,
-    "name": "Acer Laptop pro",
+    "name": "Acer Laptop pro ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/71RDNz9y4aL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 35,
-    "name": "Ipad apple",
+    "name": "Ipad apple ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/71RXkwrLY4L._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 36,
-    "name": "Video Projecteur",
+    "name": "Video Projecteur ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/71u4IRKLTFL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 37,
-    "name": "Pc portable Asus",
+    "name": "Pc portable Asus ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/810BY5U9baL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 38,
-    "name": "Pc Portable",
+    "name": "Pc Portable ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/815uX7wkOZS._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 39,
-    "name": "Acer pc",
+    "name": "Acer pc ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/815zitaLEvS._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 40,
-    "name": "Smart whach pro",
+    "name": "Smart whach pro ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/81pDVIVrfYL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 41,
-    "name": "Iphone 13",
+    "name": "Iphone 13 ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/81ReA1gb8sL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 42,
-    "name": "A court of torns and rose",
+    "name": "A court of torns and rose ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/81RrEEMiOCL._AC_SY200_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 43,
-    "name": "Acer pro pc",
+    "name": "Acer pro pc ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/81ux3SQKXrL._AC_UY327_FMwebp_QL65_.webp",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 44,
-    "name": "Iron Flame",
+    "name": "Iron Flame ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/public/917Bc9C1MlL._AC_SY200_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 45,
-    "name": "Interior Design",
+    "name": "Interior Design ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/FALL23_HP_Oct_Decor_QuadCard_D_03_186x116._SY116_CB596234042_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 46,
-    "name": "men t-shirt",
+    "name": "men t-shirt ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/Fuji_Quad_Apparel_1x._SY116_CB667159060_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 47,
-    "name": "Confortable Chair",
+    "name": "Confortable Chair ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/Fuji_Quad_Chair_1x._SY116_CB667159060_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 48,
-    "name": "Casquette",
+    "name": "Casquette ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/Fuji_Quad_Hat_1x._SY116_CB667159060_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 49,
-    "name": "Headset Wireless",
+    "name": "Headset Wireless ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 50,
-    "name": "Mouse",
+    "name": "Mouse ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 51,
-    "name": "hooded t-shirt",
+    "name": "hooded t-shirt ",
+    "fewCaract": "",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/hooded_t-shirt.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 52,
-    "name": "Gaming",
+    "name": "Gaming ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/XCM_CUTTLE_1546843_2940864_379x304_1X_en_US._SY304_CB613273467_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   },
   {
     "id": 53,
-    "name": "Laptop pro",
+    "name": "Laptop pro ",
+    "fewCaract": "- 128 GO/8 GO RAM - 8.7''",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "image": "/XCM_CUTTLE_1622892_3373436_379x304_1X_en_US._SY304_CB597161294_.jpg",
-    "price": "22 500"
+    "price": "12 000",
+    "priceOff": "14 000",
+    "devise": "cfa"
   }
 ]

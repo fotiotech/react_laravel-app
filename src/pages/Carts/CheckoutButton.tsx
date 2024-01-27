@@ -6,7 +6,7 @@ const CheckoutButton = () => {
   return (
     <div>
       <Link  to={'/checkout'}>
-      <button className="p-1 mx-3 px-4 rounded-full bg-slate-300 text-white">
+      <button className="p-1 mx-3 px-4 rounded-full bg-[#00002a] text-white">
         Checkout
       </button>
       </Link>

@@ -16,6 +16,9 @@ const Command = () => {
                     <path id="lineAB" d="M 50 100 A 40 40, 0, 0, 1, 170 1267
                     ]p0" stroke="green" strokeWidth='8' fill="none"></path>
                 </svg>
+                <div className="w-64 h-64 rounded-full bg-neutral-800 sm:bg-red-500 md:bg-blue-600">
+
+                </div>
             </div>
         </div>
     );

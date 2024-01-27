@@ -4,6 +4,7 @@ import Header from "./Header";
 import FetchData from "./hooks/FetchData";
 import AddToCart from "./carts/AddTocart";
 import CheckoutButton from "./carts/CheckoutButton";
+import Footer from "./Footer";
 
 type Product = {
   id: number;
@@ -30,29 +31,31 @@ const DetailPage: React.FC = () => {
   }, [products, productName]);
 
   return (
-    <div>
+    <>
       <Header />
-      <div className="px-20 max-sm:px-0 w-full bg-slate-100">
-        <div className="w-full mb-2 bg-white p-3">
+      <div className=" top-28  relative sm:top-40 w-full bg-[#efefef]">
+        <div className="w-full sm:p-1 bg-white px-20 sm:px-0 ">
           {filterData ? (
             <div
               key={filterData.id}
-              className="flex items-center relative justify-center max-sm:flex-col"
+              className="flex relative p-3  sm:flex-col"
             >
-              <div className="w-56 h-64 m-4">
-                <img
-                  title={filterData.name}
-                  src={filterData.image}
-                  className="w-full h-full"
-                />
+              <div className=" w-[400px] sm:w-full  h-[500px] sm:h-96">
+                <div className="w-auto sm:w-full h-full sm:h-[350px] flex justify-center items-center box-border overflow-hidden  sm:m-0">
+                  <img
+                    title={filterData.name}
+                    src={filterData.image}
+                    className="w-auto h-auto "
+                  />
+                </div>
               </div>
-              <div className="h-full w-[700] max-sm:w-full">
-                <p className="m-3 font-semibold text-xl">{filterData.name}</p>
+              <div className="h-full  w-[700px]  sm:mt-5 m-10 sm:w-full">
+                <p className="m-3 font-semibold font-sans text-2xl pb-5 ">{filterData.name}</p>
                 <div className="flex">
-                  <div>
+                  <div className="py-5">
                     <CheckoutButton />
                   </div>
-                  <div className=" ">
+                  <div className="py-5 ">
                     <AddToCart
                       id={filterData.id}
                       Name={filterData.name}
@@ -61,7 +64,7 @@ const DetailPage: React.FC = () => {
                     />
                   </div>
                 </div>
-                <p className="w-[600px] max-sm:w-full p-2">
+                <p className="w-[600px] sm:w-full py-5 p-2">
                   {filterData.description}
                 </p>
               </div>
@@ -70,9 +73,9 @@ const DetailPage: React.FC = () => {
             <p>Loading...</p>
           )}
         </div>
-        <div className="bg-white w-full">
+        <div className="bg-white px-20 sm:px-0 sm:bg-[#efefef] mt-1 w-full">
           <h2 className="text-2xl font-bold">Similar Products</h2>
-          <div className="w-full flex flex-wrap max-sm:flex-nowrap max-sm:flex-col items-center">
+          <div className="w-full flex flex-wrap sm:flex-nowrap sm:flex-col items-center sm:items-stretch">
             {products ? (
               products
                 .filter((product) =>
@@ -82,15 +85,18 @@ const DetailPage: React.FC = () => {
                 )
                 .map((data) => (
                   <Link key={data.id} to={"/detail?query=" + data.name}>
-                    <div  className="w-52 max-sm:w-full bg-white h-52 max-sm:mb-1  max-sm:flex  rounded-xl max-sm:rounded-none p-3 max-sm:p-1">
-                      <div className="bg-slate-100 w-44 max-sm:m-3 h-48">
+                    <div className="w-52 sm:w-full bg-white h-52 sm:h-48 sm:mb-1 sm:flex  rounded-xl sm:rounded-none p-3 sm:p-1">
+                      <div className=" w-44 overflow-hidden box-border sm:w-40 h-48 sm:h-44 rounded">
                         <img
                           title="image"
                           src={data.image}
-                          className="w-full h-full"
+                          className="w-auto h-auto"
                         />
                       </div>
-                      <p>{data.name}</p>
+
+                      <p className=" h-16 sm:h-12 overflow-ellipsis ">
+                        {data.name}
+                      </p>
                     </div>
                   </Link>
                 ))
@@ -99,8 +105,9 @@ const DetailPage: React.FC = () => {
             )}
           </div>
         </div>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

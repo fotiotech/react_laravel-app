@@ -2,21 +2,30 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xl: { max: "1444px" },
+      lg: { max: "1280px" },
+      md: { max: "1024px" },
+      sm: { max: "600px" },
+    },
     extend: {
-      transform: {
-        scrolls: "scrolls 30s ease-in-out infinite",
+      colors: {
+        pri: "#fff",
+        sec: "#000",
+        thi: "#00000f",
+        fou: "#00001f",
+        fif: "#092f5f",
+        six: "#ff1900",
       },
+
       keyframes: {
-        scrolls: {
-          "0%, 12.5%": { tranform: "translateX(1000px)" },
-          "12.5%, 25% ": { tranform: "translateX(1000px)" },
-          "25%, 37.5%": { tranform: "translateX(1000px)" },
-          "37.5%, 50%": { tranform: "translateX(1000px)" },
-          "50%, 62.5%": { tranform: "translateX(1000px)" },
-          "62.5%, 75%": { tranform: "translateX(1000px)" },
-          "75%, 87.5%": { tranform: "translateX(1000px)" },
-          "87.5%, 100%": { tranform: "translateX(-100%)" },
+        ScrollsX: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
+      },
+      animation: {
+        ScrollsX: "ScrollsX 10s ease-in-out infinite",
       },
     },
   },

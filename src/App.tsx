@@ -5,18 +5,18 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/DetailPage";
 import Search from "./pages/Search";
 import Product from "./pages/products/Product";
-// import CheckOut from "./pages/carts/CheckOut";
+import CheckOut from "./pages/carts/CheckOut";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/users/Login";
 import SignUp from "./pages/users/SignUp";
 import { UserContextProvider } from "./pages/users/UserContext";
 import Profile from "./pages/users/Profile";
-// import CartContext from "./pages/carts/CartContext";
+import { CartConTextProvider } from "./pages/carts/MyCartContext";
 
 const App = () => {
   return (
     <>
-      {/* <CartContext> */}
+      <CartConTextProvider>
         <UserContextProvider>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,10 +28,10 @@ const App = () => {
             <Route path="/detail" element={<DetailPage />} />
             <Route path="/product" element={<Product />} />
             <Route path="/search" element={<Search />} />
-            {/* <Route path="/checkout" element={<CheckOut />} /> */}
+            <Route path="/checkout" element={<CheckOut />} />
           </Routes>
         </UserContextProvider>
-      {/* </CartContext> */}
+      </CartConTextProvider>
     </>
   );
 };

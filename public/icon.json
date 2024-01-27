@@ -2,37 +2,37 @@
   {
     "id": 0,
     "name": "profile",
-    "image": "/1144760.png"
+    "image": "./account_circle_FILL0_wght400_GRAD0_opsz24.svg"
   },
   {
     "id": 1,
     "name": "search-bold",
-    "image": "/149852.png"
+    "image": "./149852.png"
   },
   {
     "id": 2,
     "name": "star-void",
-    "image": "/1828970.png"
+    "image": "./1828970.png"
   },
   {
     "id": 3,
     "name": "star-full",
-    "image": "/2107957.png"
+    "image": "./2107957.png"
   },
   {
     "id": 4,
     "name": "right",
-    "image": "/271220.png"
+    "image": "./271220.png"
   },
   {
     "id": 5,
     "name": "left",
-    "image": "/271228.png"
+    "image": "./271228.png"
   },
   {
     "id": 6,
     "name": "shoppin-card",
-    "image": "/2838838.png"
+    "image": "./2838838.png"
   },
   {
     "id": 7,
