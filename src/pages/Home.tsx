@@ -42,20 +42,6 @@ function Home() {
 
   FetchData("allcategory.json", setAllcategorie);
 
-  // function Collect() {
-  //   for (var i = 0; i < product.name.length; i++) {
-  //     <div>
-  //       <p className=" text-red-500">i[1]</p>
-
-  //       <p className=" text-red-500">i[3]</p>
-
-  //       <p className=" text-red-500">i[4]</p>
-
-  //       <p className=" text-red-500">i[6]</p>
-  //     </div>;
-  //   }
-  // }
-
   return (
     <>
       <Header />
@@ -113,10 +99,10 @@ function Home() {
           )}
         </div>
         <div className="w-full mt-10">
-          <h2 className=" sm:mx-1 my-4 mx-20 sm:my-2 sm:font-semibold sm:text-xl font-bold text-3xl">
+          <h2 className=" sm:mx-2 my-4 mx-20 sm:my-2 sm:font-semibold sm:text-xl font-bold text-3xl">
             All Category
           </h2>
-          <div className=" flex items-center gap-3 sm:gap-1 flex-wrap p-3 sm:p-1 bg-[#efefef] mx-20 sm:mx-0">
+          <div className=" flex items-center gap-3 sm:gap-1 flex-wrap p-3 sm:p-1 mx-20 sm:mx-0">
             {allcategorie ? (
               allcategorie.map((product) => (
                 <div
@@ -128,7 +114,7 @@ function Home() {
                       <img
                         title="image"
                         src={product.image}
-                        className="h-auto w-auto "
+                        className="h-auto w-auto"
                       />
                     </div>
                     <p className=" h-12 sm:h-12 text-base  sm:text-sm sm:my-1 w-full overflow-hidden  ">

@@ -18,7 +18,7 @@ export const CartContext = createContext<CreateContext | unknown>(null);
 
 export const CartConTextProvider: FC<ContextProps> = ({ children }) => {
   const [cart, setCart] = useState<CreateContext | unknown>(null);
-  console.log(cart);
+  // console.log(cart);
   useEffect(() => {
     var getCarts = localStorage.getItem("mycart");
     var stringifyitem = JSON.stringify(getCarts);

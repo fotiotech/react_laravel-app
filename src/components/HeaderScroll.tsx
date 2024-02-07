@@ -1,29 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FetchData from "../pages/hooks/FetchData";
 
 const HeaderScroll = () => {
   const [Products, setProducts] = useState("");
   const [icon, setIcon] = useState("");
+  const scrollRef = useRef(0);
 
   FetchData("HeaderProduct.json", setProducts);
   FetchData("icon.json", setIcon);
 
-  // function Scroll() {
-  //   setTimeout(() => {
-  //     const Scroll = document.getElementsByClassName(".Scroll");
-  //     window.scrollTo(0, document.Scroll.offsetWidth - 100);
-  //   }, 1000);
-  // }
+  function slideTo(direction) {
+    const scrollAmount =
+      direction === "left"
+        ? -scrollRef.current.clientWidth
+        : scrollRef.current.clientWidth;
 
-  function sliderigth() {
-    var slider = document.querySelector("#slider");
-    slider.scrollLeft = slider.scrollLeft - 1280;
+    scrollRef.current.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
   }
 
-  function sliderleft() {
-    var slider = document.querySelector("#slider");
-    slider.scrollLeft = slider.scrollLeft + 1280;
-  }
+  // let scrollInterval = null;
+
+  // useEffect(() => {
+  //   const scrollContainer = scrollRef.current;
+  //   const scrollWidth = scrollContainer.scrollWidth;
+  //   const clientWidth = scrollContainer.clientWidth;
+
+  //   if (scrollWidth > clientWidth) {
+  //     scrollInterval = setInterval(() => {
+  //       if (scrollContainer.scrollLeft < scrollWidth - clientWidth) {
+  //         scrollContainer.scrollLeft += clientWidth; // Adjust the scroll speed as needed
+  //       } else {
+  //         scrollContainer.scrollLeft = 0;
+  //       }
+  //     }, 5000); // Adjust the interval (in milliseconds) as needed
+  //   }
+
+  //   return () => clearInterval(scrollInterval);
+  // }, []);
 
   return (
     <div className="relative w-full h-[700px] left-0 sm:h-[400px] box-border">
@@ -36,12 +52,12 @@ const HeaderScroll = () => {
           <div className=" absolute flex justify-between items-center px-20 z-10 sm:px-2 top-52 sm:top-28 left-0 w-full ">
             <img
               src={icon[4].image}
-              onClick={sliderigth}
+              onClick={() => slideTo("left")}
               className=" w-8 h-8 sm:w-5 cursor-pointer sm:h-5 "
             />
             <img
               src={icon[5].image}
-              onClick={sliderleft}
+              onClick={() => slideTo("right")}
               className=" w-8 h-8 sm:w-5 cursor-pointer sm:h-5"
             />
           </div>
@@ -50,7 +66,7 @@ const HeaderScroll = () => {
         )}
       </div>
       <div
-        id="slider"
+        ref={scrollRef}
         className=" absolute Scroll   whitespace-nowrap overflow-hidden top-0 left-0 z-0  w-full h-full "
       >
         {Products ? (

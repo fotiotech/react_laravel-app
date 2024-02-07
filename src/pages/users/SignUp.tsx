@@ -12,28 +12,25 @@ const SignUp = () => {
 
   setUser(name);
 
-  useEffect(() => {
-    axios
-      .post("/signup", {
-        name: name,
-        email: email,
-        password: password,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
+  async function SignUpValidation(ev) {
+    ev.preventDefault();
 
-  function SignUpValidation() {
     if (!name || !email || !password) {
       alert("too bad validation");
       return false;
-    } else {
-      <Navigate to={"/profile"} />;
     }
+
+    try {
+      await axios.post("http://localhost:3000/customers/signup", {
+        name: name,
+        email: email,
+        password: password,
+      });
+      alert("Register Successfully.");
+    } catch (error) {
+      console.log(error);
+    }
+    <Navigate to={"/profile"} />;
   }
 
   return (
@@ -42,7 +39,7 @@ const SignUp = () => {
       <div className="flex justify-center items-center bg-slate-100 relative top-24 sm:top-[150px]  w-full h-[620px]">
         <div className="w-96 bg-white rounded-2xl sm:rounded-none p-8 border border-slate-700 sm:absolute sm:top-1 sm:border-0 ">
           <h1 className="mt-4 text-2xl font-bold">Sign Up</h1>
-          <form onSubmit={SignUpValidation} className=" mt-8">
+          <form onSubmit={SignUpValidation} encType="multipart/form-data" className=" mt-8">
             <label className="font-medium">Name :</label>
             <input
               onChange={(e) => setName(e.target.value)}

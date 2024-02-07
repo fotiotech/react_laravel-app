@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Products from "./Products";
 import Dashbord from "./Dashbord";
 import Command from "./Command";
@@ -18,6 +18,8 @@ const unhidemenu = "sm:left-1";
 const Admin = () => {
   var [showComponent, setShowComponent] = useState(<Dashbord />);
   const [meNu, setMeNu] = useState(hidemenu1);
+
+  
 
   return (
     <div className="w-full h-full max-w-full max-h-full">

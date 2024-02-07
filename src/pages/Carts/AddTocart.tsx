@@ -22,7 +22,7 @@ const AddToCart: FC<AddToCartProps> = ({ id, Name, image }) => {
       ProdName: Name,
       ProdImage: image,
     });
-    localStorage.setItem("mycart", JSON.stringify(cart));
+    localStorage.mycart = JSON.stringify(cart);
   }
 
   return (
